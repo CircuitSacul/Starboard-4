@@ -1,0 +1,45 @@
+[package]
+name = "starboard"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+database = {path = "../database", features = ["backend"]}
+common = {path = "../common"}
+errors = {path = "../errors"}
+
+twilight-gateway = "0.15.2"
+twilight-http = "0.15.2"
+twilight-model = "0.15.2"
+twilight-validate = "0.15.1"
+twilight-util = { version = "0.15.2", features = ["builder", "snowflake"] }
+twilight-mention = "0.15.1"
+twilight-standby = "0.15.2"
+
+twilight-interactions = "0.15.1"
+
+async-trait = "0.1.71"
+tokio = { version = "1.29.1", features = ["full"] }
+futures = "0.3.28"
+dotenv = "0.15.0"
+sqlx = { version = "0.6.3", features = ["macros", "postgres", "offline", "runtime-tokio-rustls", "chrono", "json"]}
+chrono = "0.4.26"
+serde_json = "1.0"
+# serde = "1.0.171"
+emojis = "0.6.0"
+dashmap = "5.4.0"
+regex = "1.9.1"
+lazy_static = "1.4.0"
+humantime = "2.1.0"
+reqwest = "0.11.18"
+sentry = "0.31.5"
+floodgate = "0.5.1"
+thousands = "0.2.0"
+# snafu = { version = "0.7.5", features = ["backtraces-impl-backtrace-crate"] }
+serde_with = "3.0.0"
+psutil = "3.2.2"
+rust-fuzzy-search = "0.1.1"
+moka = { version = "0.11.2", features = ["future"] }
+cached = "0.44.0"
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }

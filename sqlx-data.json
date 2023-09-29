@@ -1606,6 +1606,19 @@
     },
     "query": "INSERT INTO starboard_messages\n            (message_id, starboard_id, starboard_message_id, last_known_point_count)\n            VALUES ($1, $2, $3, $4)\n            ON CONFLICT DO NOTHING RETURNING *"
   },
+  "2b9849ae6a1099b68b2731d9b96868e33a0b62f5ff62bf205ca9204273e55f16": {
+    "describe": {
+      "columns": [],
+      "nullable": [],
+      "parameters": {
+        "Left": [
+          "Int8",
+          "Int4"
+        ]
+      }
+    },
+    "query": "UPDATE overrides SET overrides = (overrides::jsonb - 'exclusive_group')::json\n                WHERE guild_id=$1 AND (overrides::jsonb->'exclusive_group')::int=$2"
+  },
   "2dbccc87a00302144edb336fe6c8d8f74bb00dd1fc1db8b31c63ede846dfc899": {
     "describe": {
       "columns": [],
@@ -1786,19 +1799,6 @@
       }
     },
     "query": "UPDATE permroles SET obtain_xproles=$1, give_votes=$2,\n            receive_votes=$3 WHERE role_id=$4 RETURNING *"
-  },
-  "38f5219ee87e5959d6a2699f356e1d2e5ddd337c69fb84a1facba971c00c6491": {
-    "describe": {
-      "columns": [],
-      "nullable": [],
-      "parameters": {
-        "Left": [
-          "Int8",
-          "Int4"
-        ]
-      }
-    },
-    "query": "UPDATE overrides SET overrides = (overrides::jsonb - 'exclusive_group')::json\n            WHERE guild_id=$1 AND (overrides::jsonb->'exclusive_group')::int=$2"
   },
   "4210d1f0ce64aca7813b63421f3af67b1a0c3c586e0507f52754bd50c75189f3": {
     "describe": {

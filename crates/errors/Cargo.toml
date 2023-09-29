@@ -1,0 +1,18 @@
+[package]
+name = "errors"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+regex = "1.9.1"
+reqwest = "0.11.18"
+serde_json = "1.0.103"
+snafu = { version = "0.7.5", features = ["backtraces-impl-backtrace-crate"] }
+sqlx = { version = "0.6.3", features = ["macros", "postgres", "offline", "runtime-tokio-rustls", "chrono", "json"]}
+tokio = "1.29.1"
+twilight-gateway = "0.15.2"
+twilight-http = "0.15.2"
+twilight-interactions = "0.15.2"
+twilight-validate = "0.15.1"
