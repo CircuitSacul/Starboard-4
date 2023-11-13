@@ -30,7 +30,7 @@ regex = "1.9.1"
 lazy_static = "1.4.0"
 humantime = "2.1.0"
 reqwest = "0.11.18"
-sentry = "0.31.5"
+sentry = "0.31.8"
 floodgate = "0.5.1"
 thousands = "0.2.0"
 snafu = { version = "0.7.5", features = ["backtraces-impl-backtrace-crate"] }
